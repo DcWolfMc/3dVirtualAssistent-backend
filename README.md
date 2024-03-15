@@ -1,16 +1,3 @@
-## Setup
-1. Create a `.env` file at the root of the repository to add your **ElevenLabs API Key**. Refer to `.env.example` for the environment variable names.
-2. install the **ffmpeg** in your pc correctly. Link to ffmpeg website [here](https://ffmpeg.org/).
-3. Download the **RhubarbLibrary** binary for your **OS** [here](https://github.com/DanielSWolf/rhubarb-lip-sync/releases) and put it in your `bin` folder. `rhubarb` executable should be accessible through `bin/rhubarb`.
-
-Start the development server with
-```
-npm start
-npm run dev
-```
---------------------------
-
-
 <div align="center">
   <h1 align="center">
     3D Virtual Assistent (Mobile)
@@ -27,55 +14,31 @@ npm run dev
   
 * [Table of Contents](#table-of-contents)
 * [Introduction](#introduction)
-* [Installation](#installation)
-* [Functionalities](#functionalities)
-* [Screenshots](#screenshots)
+* [Setup](#setup)
 * [Technologies Used](#technologies-used)
-* [Usefull Docs and Links](#usefull-docs-and-links)
 
 ## Introduction
 
 3D Virtual Assistent is a project to display a 3D charecter and have a conversation with. This project was built to serve as a study for the use of 3d models in React and React Native.<br>
-The Mobile version runs both in iOS and Android phones with Expo. 
+The Backend version connects with ElevenLabs to use an AI voice and generete an audio file of the message recived, use a cross-platform solution to convert the audio file, so it may generate the lipsync json of the message text and return it to the frontend with the facial Expression, animation and playable audio.
 
-**Tip**: This repository is the Mobile version. If you wish to see the backend version [click here](https://github.com/DcWolfMc/3dVirtualAssistent-backend)
+**Tip**: This repository is the Backend version. If you wish to see the Mobile version [click here](https://github.com/DcWolfMc/3dVirtualAssistent-mobile)
 
-## Installation
+## Setup
+1. Create a `.env` file at the root of the repository to add your **ElevenLabs API Key**. Refer to `.env.example` for the environment variable names.
+2. Install the **ffmpeg** in your pc correctly. Link to ffmpeg website [here](https://ffmpeg.org/).
+3. Download the **RhubarbLibrary** binary for your **OS** [here](https://github.com/DanielSWolf/rhubarb-lip-sync/releases) and put it in your `bin` folder. `rhubarb` executable should be accessible through `bin/rhubarb`.
 
-1. First, install the dependencies:
-
+4. Finally, to start the development server use:
 ```
-npm install
-```
-2.  Second, use expo to initialize:
- ```
 npm start
+npm run dev
 ```
-## Functionalities
-- `Display Avatar`: Display a 3D Model using [Ready Player Me Avatar](https://readyplayer.me/)
-- `lipsync When Avatar Speak`: Map an mouth animation to play when message is ready.
-- `Audio Message`: Recive and play an audio file when message is ready.
-- `Gesture Animations`: Play an animation when message is ready to enhance interection.
-- `Send text to Avatar`: Send text message to the avatar speak. 
-- `Test backend conection`: "Speak" Button to use mockup text message and audio from backend.
-- `Hide/Show UI`: 👁️ Button to change the UI display. 
-
-## Screenshots
-<p width="100%">
-  <img src="./screenshot1.png" alt="screenshot1" width="40%" hspace="32"/>
-  <img src="./screenshot2.png" alt="screenshot1" width="40%" hspace="32"/>
-</p>
 
 ## Technologies Used
-- React Native
-- React Three Fiber
-- React Three Drei
-- Tailwind CSS
-- Typescript
-- Expo
-
-## Usefull Docs and Links
-- [Ready Player Me - RestAPI Documentation](https://docs.readyplayer.me/ready-player-me/api-reference/rest-api)
-  - In case you wish to place your own RPM model on the project, here is the RestAPI [Link to GET your 3D Avatar.](https://docs.readyplayer.me/ready-player-me/api-reference/rest-api/avatars/get-3d-avatars)
-- [React Three Fiber Documentation](https://docs.pmnd.rs/react-three-fiber/getting-started/introduction)
-- [gltfjsx](https://gltf.pmnd.rs/) - Map your 3D model file in glt to .jsx or .tsx .
+- Node.js
+- Express
+- Javascript
+- Restfull API
+- Elevenlabs
+- OpenAI ***(To be implemented)***
