@@ -1,6 +1,6 @@
 <div align="center">
   <h1 align="center">
-    3D Virtual Assistent (Mobile)
+    3D Virtual Assistent (Backend)
     <br />
     <br />
       <img src="./cover.png" alt="3D Virtual Assistent (Mobile)">
