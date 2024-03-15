@@ -80,7 +80,7 @@ app.post("/chat", async (req, res) => {
     res.send({
       messages: [
         {
-          text: "Please my dear, don't forget to add your API key!",
+          text: "Please, don't forget to add your API key!",
           audio: await audioFileToBase64("audios/api_0.wav"),
           lipsync: await readJsonTranscript("audios/api_0.json"),
           facialExpression: "angry",
@@ -139,5 +139,5 @@ const audioFileToBase64 = async (file) => {
 };
 
 app.listen(port, () => {
-  console.log(`Virtual Girlfriend listening on port ${port}`);
+  console.log(`3D Virtual Assistent Backend listening on port ${port}`);
 });
